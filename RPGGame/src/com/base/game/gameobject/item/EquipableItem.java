@@ -1,0 +1,29 @@
+package com.base.game.gameobject.item;
+
+import com.base.engine.Sprite;
+
+public class EquipableItem extends Item {
+	
+	public static final int HEAD_SLOT = 0;
+	public static final int BODY_SLOT = 1;
+	public static final int LEGS_SLOT = 2;
+	public static final int WEAPON_SLOT = 3;
+	public static final int NUM_SLOTS = 4;
+	private int slot;
+	
+	protected void init(float x, float y, float r, float g, float b, float sx, float sy,String name, int slot) {
+		
+		this.x = x;
+		this.y = y;
+		this.type = ITEM_ID;
+		this.slot = slot;
+		this.spr = new Sprite(r,g,b,sx,sy);
+		this.name = name;
+	}
+
+	public int getSlot() {
+		return slot;
+	}
+	
+	
+}
